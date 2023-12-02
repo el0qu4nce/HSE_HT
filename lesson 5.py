@@ -77,6 +77,7 @@
 #     print('Число двузначное')
 # else:
 #     print('Число трехзначное')
+
 """
 6. Напишите программу, принимающую на вход год и выводящую "Високосный", если в этом году действительно
 366 дней, и "Невисокосный" иначе. Год считается високосным, если его номер делится на 4, но не делится на
@@ -84,7 +85,7 @@
 """
 
 # n = int(input())
-# if n % 4 == 0 and n % 100 != 0 and n % 400 != 0:
+# if (n % 4 == 0 and n % 100 != 0) or n % 400 == 0:
 #     print('Високосный')
 # else:
 #     print('Невисокосный')
@@ -96,7 +97,13 @@
 """
 
 # pswrd = input('write in your password: ')
-# if len(pswrd) >= 8 and pswrd.lower() != pswrd and ('*' in pswrd or '-' in pswrd or '#' in pswrd):
+# flag = False
+#     for i in pswrd:
+#         if i.isdigit():
+#             flag = True
+#         else:
+#             continue
+# if len(pswrd) >= 8 and pswrd.lower() != pswrd and and pswrd.upper() != pswrd and ('*' in pswrd or '-' in pswrd or '#' in pswrd) and flag:
 #     print('Strong!')
 # else:
 #     print('so-so-so. Change it')
